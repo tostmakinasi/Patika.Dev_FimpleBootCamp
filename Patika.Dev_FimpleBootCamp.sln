@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#101", "C#101", "{393722A3-FBA9-47B5-84B5-DFFDD8857165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Degiskenler", "C#101\Degiskenler\Degiskenler.csproj", "{F689EC20-FAC2-4BDE-A307-ECDBD8A76352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F689EC20-FAC2-4BDE-A307-ECDBD8A76352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F689EC20-FAC2-4BDE-A307-ECDBD8A76352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F689EC20-FAC2-4BDE-A307-ECDBD8A76352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F689EC20-FAC2-4BDE-A307-ECDBD8A76352}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F689EC20-FAC2-4BDE-A307-ECDBD8A76352} = {393722A3-FBA9-47B5-84B5-DFFDD8857165}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49DC5941-847A-451B-965A-CAF8AA940ABB}
+	EndGlobalSection
+EndGlobal
