@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}</ProjectGuid>
+    <ProjectGuid>{B68DA04A-001D-41E8-8220-53649567E434}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>PhoneBookApplication</RootNamespace>
     <AssemblyName>PhoneBookApplication</AssemblyName>

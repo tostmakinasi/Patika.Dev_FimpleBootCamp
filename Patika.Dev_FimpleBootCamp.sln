@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hafta_0", "Hafta_0", "{9D3C06B9-08AD-4D88-83AF-CE9D4A1C66F5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hafta_1", "Hafta_1", "{9D3C06B9-08AD-4D88-83AF-CE9D4A1C66F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CourseContent", "CourseContent", "{BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookApplication", "Hafta_0\Assignment\PhoneBookApplication\PhoneBookApplication.csproj", "{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers_Constructor", "Hafta_0\CourseContent\AccessModifiers_Constructor\AccessModifiers_Constructor.csproj", "{D0274DAA-7EA3-4826-8709-64798306F3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookApplication", "Hafta_1\Assignment\PhoneBookApplication\PhoneBookApplication.csproj", "{B68DA04A-001D-41E8-8220-53649567E434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D0274DAA-7EA3-4826-8709-64798306F3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0274DAA-7EA3-4826-8709-64798306F3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0274DAA-7EA3-4826-8709-64798306F3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68DA04A-001D-41E8-8220-53649567E434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68DA04A-001D-41E8-8220-53649567E434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68DA04A-001D-41E8-8220-53649567E434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68DA04A-001D-41E8-8220-53649567E434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{9A13712A-5FD4-4B08-B624-0A88C6144AB7} = {9D3C06B9-08AD-4D88-83AF-CE9D4A1C66F5}
 		{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7} = {9A13712A-5FD4-4B08-B624-0A88C6144AB7}
 		{D0274DAA-7EA3-4826-8709-64798306F3EC} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
+		{B68DA04A-001D-41E8-8220-53649567E434} = {9A13712A-5FD4-4B08-B624-0A88C6144AB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DC5941-847A-451B-965A-CAF8AA940ABB}
