@@ -27,7 +27,6 @@ namespace Class_Instance_Field_Property
 
 
 
-
             Employee employeeOne = new Employee();
             employeeOne.Name = "Berk";
             employeeOne.LastName = "Turgut";
