@@ -26,19 +26,19 @@ namespace Class_Instance_Field_Property
             // * Internal
             // * Protected
             Console.WriteLine("*****Çalışan 1******");
-            Calisan calisan1 = new Calisan("Nevzat", "Çırpıcıoğlu", 1806538, "IT");
+            Calisan calisan1 = new Calisan("Erdal", "Arda", 1833538, "IT");
             calisan1.CalisanBilgileri();
 
             Console.WriteLine("*****Çalışan 2******");
             Calisan calisan2 = new Calisan();
-            calisan1.Ad = "Yahya";
-            calisan1.Soyad = "Çırpıcıoğlu";
-            calisan1.No = 123456;
+            calisan1.Ad = "Sıla";
+            calisan1.Soyad = "Dana";
+            calisan1.No = 123156;
             calisan1.Departman = "Finans";
             calisan1.CalisanBilgileri();
 
             Console.WriteLine("*****Çalışan 3******");
-            Calisan calisan3 = new Calisan("Nevzat", "Çırpıcıoğlu");
+            Calisan calisan3 = new Calisan("Cengiz", "Holding");
             calisan3.CalisanBilgileri();
         }
 
@@ -58,7 +58,11 @@ namespace Class_Instance_Field_Property
             }
             public Calisan() { } //Constructor 2
 
-            public Calisan(string ad, string soyad) { } // Constructor 3
+            public Calisan(string ad, string soyad) {
+
+                this.Ad = ad;
+                this.Soyad = soyad;
+            } 
             public void CalisanBilgileri()
             {
                 Console.WriteLine("Çalışanın Adı: {0}", Ad);
