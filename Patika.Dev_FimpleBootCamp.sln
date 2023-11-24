@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment", "Assignment", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookApplication", "Hafta_0\Assignment\PhoneBookApplication\PhoneBookApplication.csproj", "{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers_Constructor", "AccessModifiers_Constructor\AccessModifiers_Constructor.csproj", "{0D032BA4-3401-4AF2-9879-39149FB11204}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D032BA4-3401-4AF2-9879-39149FB11204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D032BA4-3401-4AF2-9879-39149FB11204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D032BA4-3401-4AF2-9879-39149FB11204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D032BA4-3401-4AF2-9879-39149FB11204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{2B428CBF-C83A-43E9-B71D-D2467D5986D2} = {9D2E9D65-6EE3-418A-8B8B-E61D9435D9B8}
 		{9A13712A-5FD4-4B08-B624-0A88C6144AB7} = {9D3C06B9-08AD-4D88-83AF-CE9D4A1C66F5}
 		{D66DC0A1-40A7-4EBE-BA5F-8259CA8740D7} = {9A13712A-5FD4-4B08-B624-0A88C6144AB7}
+		{0D032BA4-3401-4AF2-9879-39149FB11204} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DC5941-847A-451B-965A-CAF8AA940ABB}
