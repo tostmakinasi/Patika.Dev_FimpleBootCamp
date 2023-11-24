@@ -10,65 +10,57 @@ namespace Class_Instance_Field_Property
     {
         static void Main(string[] args)
         {
-            // Söz dizimi
-            // class sinifAdi
+            // Syntax
+            // Class ClassName
             //{
-            //[Erişim belirleyici] [Veri tipi] OzellikAdi;
-            //[Erişim belirleyici] [Geri dönüş tipi] MetotAdi([Parametre Listesi])
-            //{
-            //Metot komutları
-            //}
-            //}
+            //    [Access Modifiers]    [Data Type] PropertyName:
+            //    [Access Modifiers]    [Return Type] MethodsName ([List of parameters])
+            //    {
+            //        // Operations
+            //    }
 
-            //Erişim belirleyiciler
+            //Access Modifiers
             // * Public
             // * Private
             // * Internal
             // * Protected
-            Console.WriteLine("*****Çalışan 1******");
-            Calisan calisan1 = new Calisan("Erdal", "Arda", 1833538, "IT");
-            calisan1.CalisanBilgileri();
 
-            Console.WriteLine("*****Çalışan 2******");
-            Calisan calisan2 = new Calisan();
-            calisan1.Ad = "Sıla";
-            calisan1.Soyad = "Dana";
-            calisan1.No = 123156;
-            calisan1.Departman = "Finans";
-            calisan1.CalisanBilgileri();
 
-            Console.WriteLine("*****Çalışan 3******");
-            Calisan calisan3 = new Calisan("Cengiz", "Holding");
-            calisan3.CalisanBilgileri();
+
+
+            Employee employeeOne = new Employee();
+            employeeOne.Name = "Berk";
+            employeeOne.LastName = "Turgut";
+            employeeOne.No = 123456;
+            employeeOne.Department = "IT";
+
+            employeeOne.GetEmployeeInfo();
+
+            Console.WriteLine("************");
+
+            Employee employeeTwo = new Employee();
+            employeeTwo.Name = "Ali";
+            employeeTwo.LastName = "Solmaz";
+            employeeTwo.No = 123434;
+            employeeTwo.Department = "Hr";
+
+            employeeTwo.GetEmployeeInfo();
+
         }
 
-        class Calisan
+        class Employee
         {
-            public string Ad;
-            public string Soyad;
+            public string Name;
+            public string LastName;
             public int No;
-            public string Departman;
+            public string Department;
 
-            public Calisan(string ad, string soyad, int no, string departman) // Constructor 
+            public void GetEmployeeInfo()
             {
-                this.Ad = ad;
-                this.Soyad = soyad;
-                this.No = no;
-                this.Departman = departman;
-            }
-            public Calisan() { } //Constructor 2
-
-            public Calisan(string ad, string soyad) {
-
-                this.Ad = ad;
-                this.Soyad = soyad;
-            } 
-            public void CalisanBilgileri()
-            {
-                Console.WriteLine("Çalışanın Adı: {0}", Ad);
-                Console.WriteLine("Çalışanın Soyadı: {0}", Soyad);
-                Console.WriteLine("Çalışanın Numarası: {0}", No);
-                Console.WriteLine("Çalışanın Departmanı: {0}", Departman);
+                Console.WriteLine("Name of the employee: {0}", Name);
+                Console.WriteLine("Last Name of the employee: {0}", LastName);
+                Console.WriteLine("Id of the employee: {0}", No);
+                Console.WriteLine("Department of the employee: {0}", Department);
             }
         }
     }
