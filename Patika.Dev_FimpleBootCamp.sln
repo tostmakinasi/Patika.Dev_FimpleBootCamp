@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineClass", "Hafta_1\Onli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticClass_Members", "Hafta_1\CourseContent\StaticClass_Members\StaticClass_Members.csproj", "{B295763A-03CE-4D76-A735-1D991388537A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct", "Hafta_1\CourseContent\Struct\Struct.csproj", "{244C11D0-2CAC-43E1-864E-A698C6A09706}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B295763A-03CE-4D76-A735-1D991388537A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B295763A-03CE-4D76-A735-1D991388537A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B295763A-03CE-4D76-A735-1D991388537A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244C11D0-2CAC-43E1-864E-A698C6A09706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244C11D0-2CAC-43E1-864E-A698C6A09706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244C11D0-2CAC-43E1-864E-A698C6A09706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244C11D0-2CAC-43E1-864E-A698C6A09706}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{76C08E33-35E7-43F0-B879-73206D3F95B1} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
 		{681AA91F-1C0C-437D-8BC8-81B796C91465} = {9D3C06B9-08AD-4D88-83AF-CE9D4A1C66F5}
 		{B295763A-03CE-4D76-A735-1D991388537A} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
+		{244C11D0-2CAC-43E1-864E-A698C6A09706} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DC5941-847A-451B-965A-CAF8AA940ABB}
