@@ -15,7 +15,7 @@ namespace Assignment.API.Controllers
             ProductSeeds();
         }
 
-        private void ProductSeeds()
+        private void ProductSeeds() //Başlangıçta veri kümesini oluşturmak için
         {
             _products.Add(new Product { Id = 1, Name = "Product 1", Price = 10.0 });
             _products.Add(new Product { Id = 2, Name = "Product 2", Price = 20.0 });
@@ -34,23 +34,25 @@ namespace Assignment.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> Products()
         {
-            return Ok(_products);
+            return Ok(_products);//200 Kodu döndürür
         }
 
+        // GET api/products
         [HttpGet("{id}")]
         public ActionResult<Product> ProductById(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
             {
-                return Ok(product);
+                return Ok(product);//200
             }
             else
             {
-                return NotFound(new { error = "Product not found" });
+                return NotFound(new { error = "Product not found" });//404
             }
         }
 
+        // POST api/products
         [HttpPost]
         public ActionResult AddProduct([FromBody] Product product)
         {
@@ -58,14 +60,15 @@ namespace Assignment.API.Controllers
             {
                 product.Id = _products.OrderByDescending(x=> x.Id).First().Id + 1;
                 _products.Add(product);
-                return CreatedAtAction(nameof(ProductById), new { id = product.Id }, product);
+                return CreatedAtAction(nameof(ProductById), new { id = product.Id }, product);//201
             }
             else
             {
-                return BadRequest(new { error = "Invalid data" });
+                return BadRequest(new { error = "Invalid data" });//400
             }
         }
 
+        // PUT api/products/{id}
         [HttpPut("{id}")]
         public ActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
         {
@@ -82,6 +85,7 @@ namespace Assignment.API.Controllers
             }
         }
 
+        // PATCH api/products/{id}
         [HttpPatch("{id}")]
         public ActionResult PatchProduct(int id, [FromBody] Product updatedProduct)
         {
@@ -98,6 +102,7 @@ namespace Assignment.API.Controllers
             return Ok(new { message = "Product patched successfully" });
         }
 
+        // DELETE api/products/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteProduct(int id)
         {
@@ -113,6 +118,7 @@ namespace Assignment.API.Controllers
             }
         }
 
+        // GET api/products/list?name=
         [HttpGet("list")]
         public ActionResult<IEnumerable<Product>> GetProductsByName([FromQuery] string name)
         {
@@ -120,7 +126,7 @@ namespace Assignment.API.Controllers
             return Ok(filteredProducts);
         }
 
-     
+        // GET api/products/sort
         [HttpGet("sort")]
         public ActionResult<IEnumerable<Product>> SortProductsByName()
         {
