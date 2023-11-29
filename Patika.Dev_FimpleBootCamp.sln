@@ -17,13 +17,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class_Instance_Field_Proper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulationProperty", "Hafta_1\CourseContent\EncapsulationProperty\EncapsulationProperty.csproj", "{76C08E33-35E7-43F0-B879-73206D3F95B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineClass", "Hafta_1\OnlineClass\OnlineClass.csproj", "{681AA91F-1C0C-437D-8BC8-81B796C91465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineClass", "Hafta_1\OnlineClass\OnlineClass.csproj", "{681AA91F-1C0C-437D-8BC8-81B796C91465}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticClass_Members", "Hafta_1\CourseContent\StaticClass_Members\StaticClass_Members.csproj", "{B295763A-03CE-4D76-A735-1D991388537A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct", "Hafta_1\CourseContent\Struct\Struct.csproj", "{244C11D0-2CAC-43E1-864E-A698C6A09706}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Hafta_1\CourseContent\Enums\Enums.csproj", "{26B04804-F35C-4BB8-9AB6-B4C56A61B4A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem", "Hafta_1\Assignment\LibraryManagementSystem\LibraryManagementSystem.csproj", "{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hafta_2", "Hafta_2", "{079BEB28-03C0-4D5C-A574-4529DFBEE271}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignments", "Assignments", "{52EA9BB8-2D07-4C8F-A274-7FF0CEB671A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentHafta2.API", "Hafta_2\Assignments\Assignment.API\AssignmentHafta2.API.csproj", "{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +71,14 @@ Global
 		{26B04804-F35C-4BB8-9AB6-B4C56A61B4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B04804-F35C-4BB8-9AB6-B4C56A61B4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B04804-F35C-4BB8-9AB6-B4C56A61B4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +94,9 @@ Global
 		{B295763A-03CE-4D76-A735-1D991388537A} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
 		{244C11D0-2CAC-43E1-864E-A698C6A09706} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
 		{26B04804-F35C-4BB8-9AB6-B4C56A61B4A0} = {BF38C3DB-2B1F-4E0E-B62E-6A3AA32011AA}
+		{45668D9E-80BE-4FA5-B052-86AC6F6CCD6D} = {9A13712A-5FD4-4B08-B624-0A88C6144AB7}
+		{52EA9BB8-2D07-4C8F-A274-7FF0CEB671A9} = {079BEB28-03C0-4D5C-A574-4529DFBEE271}
+		{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5} = {52EA9BB8-2D07-4C8F-A274-7FF0CEB671A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49DC5941-847A-451B-965A-CAF8AA940ABB}
