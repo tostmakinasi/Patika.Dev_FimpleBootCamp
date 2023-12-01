@@ -54,7 +54,7 @@ namespace Assignment.API.Controllers
 
         // POST api/products
         [HttpPost]
-        public ActionResult AddProduct([FromBody] Product product)
+        public ActionResult Product([FromBody] Product product)
         {
             if (product != null && ModelState.IsValid)
             {
@@ -70,7 +70,7 @@ namespace Assignment.API.Controllers
 
         // PUT api/products/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
+        public ActionResult Product(int id, [FromBody] Product updatedProduct)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null && ModelState.IsValid)
@@ -104,7 +104,7 @@ namespace Assignment.API.Controllers
 
         // DELETE api/products/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteProduct(int id)
+        public ActionResult Product(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
