@@ -119,7 +119,7 @@ namespace Assignment.API.Controllers
         }
 
         // GET api/products/list?name=
-        [HttpGet("list")]
+        [HttpGet("search")]
         public ActionResult<IEnumerable<Product>> SearchProductsByName([FromQuery] string name)
         {
             var filteredProducts = _products.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
