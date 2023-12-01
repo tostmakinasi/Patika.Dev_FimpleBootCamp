@@ -32,14 +32,14 @@ namespace Assignment.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> Products()
+        public ActionResult<IEnumerable<Product>> GetProducts()
         {
             return Ok(_products);//200 Kodu döndürür
         }
 
         // GET api/products
         [HttpGet("{id}")]
-        public ActionResult<Product> ProductById(int id)
+        public ActionResult<Product> GetProductById(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
@@ -54,13 +54,13 @@ namespace Assignment.API.Controllers
 
         // POST api/products
         [HttpPost]
-        public ActionResult Product([FromBody] Product product)
+        public ActionResult CreateProduct([FromBody] Product product)
         {
             if (product != null && ModelState.IsValid)
             {
                 product.Id = _products.OrderByDescending(x=> x.Id).First().Id + 1;
                 _products.Add(product);
-                return CreatedAtAction(nameof(ProductById), new { id = product.Id }, product);//201
+                return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);//201
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Assignment.API.Controllers
 
         // PUT api/products/{id}
         [HttpPut("{id}")]
-        public ActionResult Product(int id, [FromBody] Product updatedProduct)
+        public ActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null && ModelState.IsValid)
@@ -104,7 +104,7 @@ namespace Assignment.API.Controllers
 
         // DELETE api/products/{id}
         [HttpDelete("{id}")]
-        public ActionResult Product(int id)
+        public ActionResult DeleteProduct(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
@@ -120,7 +120,7 @@ namespace Assignment.API.Controllers
 
         // GET api/products/list?name=
         [HttpGet("list")]
-        public ActionResult<IEnumerable<Product>> Products([FromQuery] string name)
+        public ActionResult<IEnumerable<Product>> SearchProductsByName([FromQuery] string name)
         {
             var filteredProducts = _products.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
             return Ok(filteredProducts);
