@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hafta_2", "Hafta_2", "{079B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignments", "Assignments", "{52EA9BB8-2D07-4C8F-A274-7FF0CEB671A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentHafta2.API", "Hafta_2\Assignments\Assignment.API\AssignmentHafta2.API.csproj", "{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmentHafta2.API", "Hafta_2\Assignments\Assignment.API\AssignmentHafta2.API.csproj", "{2D4D55BD-CAD3-4D2C-A14A-7D5D89CC5AF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

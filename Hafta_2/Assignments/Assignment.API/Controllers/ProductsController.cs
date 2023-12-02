@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Assignment.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -12,10 +12,10 @@ namespace Assignment.API.Controllers
         public ProductsController()
         {
             _products = new List<Product>();
-            ProductSeeds();
+            Seeds();
         }
 
-        private void ProductSeeds() //Başlangıçta veri kümesini oluşturmak için
+        private void Seeds() //Başlangıçta veri kümesini oluşturmak için
         {
             _products.Add(new Product { Id = 1, Name = "Product 1", Price = 10.0 });
             _products.Add(new Product { Id = 2, Name = "Product 2", Price = 20.0 });
@@ -39,7 +39,7 @@ namespace Assignment.API.Controllers
 
         // GET api/products
         [HttpGet("{id}")]
-        public ActionResult<Product> GetProductById(int id)
+        public ActionResult<Product> GetById(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
@@ -54,13 +54,13 @@ namespace Assignment.API.Controllers
 
         // POST api/products
         [HttpPost]
-        public ActionResult CreateProduct([FromBody] Product product)
+        public ActionResult Create([FromBody] Product product)
         {
             if (product != null && ModelState.IsValid)
             {
                 product.Id = _products.OrderByDescending(x=> x.Id).First().Id + 1;
                 _products.Add(product);
-                return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);//201
+                return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);//201
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Assignment.API.Controllers
 
         // PUT api/products/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
+        public ActionResult Update(int id, [FromBody] Product updatedProduct)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null && ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace Assignment.API.Controllers
 
         // PATCH api/products/{id}
         [HttpPatch("{id}")]
-        public ActionResult PatchProduct(int id, [FromBody] Product updatedProduct)
+        public ActionResult Patch(int id, [FromBody] Product updatedProduct)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
 
@@ -104,7 +104,7 @@ namespace Assignment.API.Controllers
 
         // DELETE api/products/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteProduct(int id)
+        public ActionResult Delete(int id)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
             if (product != null)
@@ -118,9 +118,9 @@ namespace Assignment.API.Controllers
             }
         }
 
-        // GET api/products/list?name=
+        // GET api/products/search?name=
         [HttpGet("search")]
-        public ActionResult<IEnumerable<Product>> SearchProductsByName([FromQuery] string name)
+        public ActionResult<IEnumerable<Product>> SearchByName([FromQuery] string name)
         {
             var filteredProducts = _products.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
             return Ok(filteredProducts);
@@ -128,7 +128,7 @@ namespace Assignment.API.Controllers
 
         // GET api/products/sort
         [HttpGet("sort")]
-        public ActionResult<IEnumerable<Product>> SortProductsByName()
+        public ActionResult<IEnumerable<Product>> SortByName()
         {
             var sortedProducts = _products.OrderBy(p => p.Name).ToList();
             return Ok(sortedProducts);
