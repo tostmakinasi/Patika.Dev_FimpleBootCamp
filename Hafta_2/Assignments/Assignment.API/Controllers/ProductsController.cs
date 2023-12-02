@@ -1,5 +1,6 @@
 ﻿using Assignment.API.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Assignment.API.Controllers
@@ -87,7 +88,7 @@ namespace Assignment.API.Controllers
 
         // PATCH api/products/{id}
         [HttpPatch("{id}")]
-        public ActionResult Patch(int id, [FromBody] Product updatedProduct)
+        public ActionResult PatchProduct(int id, [FromBody] JsonPatchDocument<Product> patchDoc)
         {
             var product = _products.FirstOrDefault(p => p.Id == id);
 
@@ -96,8 +97,17 @@ namespace Assignment.API.Controllers
                 return NotFound(new { error = "Product not found" });
             }
 
-            product.Name = updatedProduct.Name ?? product.Name;
-            product.Price = updatedProduct.Price > 0 ? updatedProduct.Price : product.Price;
+            if (patchDoc == null)
+            {
+                return BadRequest(new { error = "Patch document is null" });
+            }
+
+            patchDoc.ApplyTo(product);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
             return Ok(new { message = "Product patched successfully" });
         }
@@ -126,12 +136,62 @@ namespace Assignment.API.Controllers
             return Ok(filteredProducts);
         }
 
-        // GET api/products/sort
-        [HttpGet("sort")]
-        public ActionResult<IEnumerable<Product>> SortByName()
+        //GET api/products/sort
+       [HttpGet("sort")]
+        public ActionResult<IEnumerable<Product>> Sort([FromQuery] List<SortParameters> sorting)
         {
-            var sortedProducts = _products.OrderBy(p => p.Name).ToList();
+            if (sorting == null || !sorting.Any())
+            {
+                throw new ArgumentException("Sorting parameters are missing.");
+            }
+
+            var sortedProducts = _products.ToList();
+
+            
+            foreach (var sort in sorting)
+            {
+                switch (sort.Name.ToLower())
+                {
+                    case nameof(Product.Name):
+                        sortedProducts = sort.Order == Ordering.Ascending
+                            ? sortedProducts.OrderBy(p => p.Name).ToList()
+                            : sortedProducts.OrderByDescending(p => p.Name).ToList();
+                        break;
+                    case nameof(Product.Id):
+                        sortedProducts = sort.Order == Ordering.Ascending
+                            ? sortedProducts.OrderBy(p => p.Id).ToList()
+                            : sortedProducts.OrderByDescending(p => p.Id).ToList();
+                        break;
+
+                    case nameof(Product.Price):
+                        sortedProducts = sort.Order == Ordering.Ascending
+                            ? sortedProducts.OrderBy(p => p.Price).ToList()
+                            : sortedProducts.OrderByDescending(p => p.Id).ToList();
+                        break;
+
+                    default:
+                        
+                        throw new ArgumentException($"Invalid sorting parameter: {sort.Name}");
+                }
+            }
+
             return Ok(sortedProducts);
         }
+
+
+    }
+    public struct SortParameters
+    {
+        public SortParameters()
+        {
+            
+        }
+        public string Name = nameof(Product.Id);
+        public Ordering Order = Ordering.Ascending;
+    }
+    public enum Ordering
+    {
+        Ascending,
+        Descending
     }
 }
