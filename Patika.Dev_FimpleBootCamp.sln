@@ -49,6 +49,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieStoreApi", "AllAPIs\Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.UnitTests", "AllAPIs\Tests\WebApi.UnitTests\WebApi.UnitTests.csproj", "{5F2EAF26-8250-45A3-B821-DF9B376FE6ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{C6D8D59F-05C5-47CA-80F8-BB4F0DCF86F1}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\odev-1.sql = SQL\odev-1.sql
+		SQL\odev-10.sql = SQL\odev-10.sql
+		SQL\odev-11.sql = SQL\odev-11.sql
+		SQL\odev-12.sql = SQL\odev-12.sql
+		SQL\odev-2.sql = SQL\odev-2.sql
+		SQL\odev-3.sql = SQL\odev-3.sql
+		SQL\odev-4.sql = SQL\odev-4.sql
+		SQL\odev-5.sql = SQL\odev-5.sql
+		SQL\odev-6.sql = SQL\odev-6.sql
+		SQL\odev-7.sql = SQL\odev-7.sql
+		SQL\odev-8.sql = SQL\odev-8.sql
+		SQL\odev-9.sql = SQL\odev-9.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
